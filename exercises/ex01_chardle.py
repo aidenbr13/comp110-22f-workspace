@@ -10,8 +10,8 @@ if len(word) != 5:
 
 guess: str = input("Enter a single character: ")
 
-if len(guess) !=1:
-    print("Character must be a single character.")
+if len(guess) != 1:
+    print("Error: Character must be a single character.")
     exit()
 
 print("searching for " + guess + " in " + word)
@@ -20,23 +20,23 @@ count: int = 0
 
 if guess == word[0]:
     count = count + 1
-    print(guess + " found at index 0"); 
+    print(guess + " found at index 0")
 
 if guess == word[1]:
     count = count + 1
-    print(guess + " found at index 1"); 
+    print(guess + " found at index 1") 
 
 if guess == word[2]:
     count = count + 1
-    print(guess + " found at index 2"); 
+    print(guess + " found at index 2") 
 
 if guess == word[3]:
     count = count + 1
-    print(guess + " found at index 3"); 
+    print(guess + " found at index 3") 
 
 if guess == word[4]:
     count = count + 1
-    print(guess + " found at index 4"); 
+    print(guess + " found at index 4") 
 
 if count == 1:
     print("1 instance of " + guess + " found in " + word)
