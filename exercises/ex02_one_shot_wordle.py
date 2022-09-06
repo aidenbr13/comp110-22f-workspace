@@ -20,7 +20,7 @@ yellow_box: str = "\U0001F7E8"
 
 while len(guess) != len(word):
     print(f"That was not {length} letters! Try again: ", end='')
-    guess: str = input() 
+    guess: str = input() #type: ignore
 
 else:
     if guess != word:
