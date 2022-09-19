@@ -24,10 +24,10 @@ def max(input: list[int]) -> int:
     i: int = 0
     z: int = input[i]
     while i < len(input):
-        if input[i] < input[i + 1]:
+        if z < input[i + 1]:
+            i = i + 1
             z = input[i + 1]
-        i = i + 1
-    return z
+        return z
 
 
 def is_equal(a: list[int], b: list[int]) -> bool:
