@@ -9,27 +9,26 @@ def all(x: list[int], y: int) -> bool:
     if len(x) == 0:
         return False
     while i < len(x):
-        if x[i] == x[i + 1] == x[len(x) - 1] == y:
+        if x[i] == y:
             i = i + 1
-            return True
         else:
             return False
-    return False
+    return True
 
 
 def max(input: list[int]) -> int:
     """Created a function that returns the largest value in a given list."""
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
-    i: int = 0
-    z: int = input[i]
+    i: int = 1
+    z: int = input[0]
     while i < len(input):
-        if z < input[i + 1]:
+        if z < input[i]:
+            z = input[i]
             i = i + 1
-            z = input[i + 1]
         else:
             i = i + 1
-        return z
+    return z
 
 
 def is_equal(a: list[int], b: list[int]) -> bool:
