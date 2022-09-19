@@ -27,6 +27,8 @@ def max(input: list[int]) -> int:
         if z < input[i + 1]:
             i = i + 1
             z = input[i + 1]
+        else:
+            i = i + 1
         return z
 
 
