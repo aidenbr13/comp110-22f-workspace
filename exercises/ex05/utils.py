@@ -24,19 +24,19 @@ def concat(x: list[int], y: list[int]) -> list[int]:
         for i in y:
             z.append(y[i])
         return z
-        
+
 
 def sub(a_list: list[int], y: int, z: int) -> list[int]:
     """Defined a function that shortens a given list to be between given indeces."""
     q: list[int] = []
     if len(a_list) == 0:
         return q
-    if y == len(list):
+    if y == len(a_list):
         return q
     if y < 0:
         y == 0
-    if z > len(list):
-        z == len(list)
+    if z > len(a_list):
+        z == len(a_list)
     else:
         while y < z:
             q.append(a_list[y])
