@@ -27,7 +27,10 @@ def concat(x: list[int], y: list[int]) -> list[int]:
 def sub(a_list: list[int], y: int, z: int) -> list[int]:
     """Defined a function that shortens a given list to be between given indeces."""
     q: list[int] = []
-    while y < z:
-        q.append(a_list[y])
-        y += 1
-    return q
+    if len(a_list) == 0:
+        return q
+    else:
+        while y < z:
+            q.append(a_list[y])
+            y += 1
+        return q
