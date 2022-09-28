@@ -18,12 +18,11 @@ def concat(x: list[int], y: list[int]) -> list[int]:
     """Defined a function that combines the elements of two lists into one longer list."""
     z: list[int] = []
     i: int = 0
-    if len(x) == len(y):
-        for i in x:
-            z.append(x[i])
-        for i in y:
-            z.append(y[i])
-        return z
+    for i in x:
+        z.append(x[i])
+    for i in y:
+        z.append(y[i])
+    return z
 
 
 def sub(a_list: list[int], y: int, z: int) -> list[int]:
@@ -34,9 +33,9 @@ def sub(a_list: list[int], y: int, z: int) -> list[int]:
     if y == len(a_list):
         return q
     if y < 0:
-        y == 0
+        y = 0
     if z > len(a_list):
-        z == len(a_list)
+        z = len(a_list)
     else:
         while y < z:
             q.append(a_list[y])
