@@ -17,7 +17,6 @@ def only_evens(x: list[int]) -> list[int]:
 def concat(x: list[int], y: list[int]) -> list[int]:
     """Defined a function that combines the elements of two lists into one longer list."""
     z: list[int] = []
-    i: int = 0
     for i in x:
         z.append(x[i])
     for i in y:
