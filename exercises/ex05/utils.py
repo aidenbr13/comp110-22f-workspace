@@ -5,9 +5,8 @@ __author__: str = "730320104"
 
 def only_evens(x: list[int]) -> list[int]:
     """Defined a function that returns even numbers in a given list."""
-    i: int = 0
     z: list[int] = []
-    for x[i] in x:
+    for i in x:
         if x[i] % 2 == 0:
             z.append(x[i])
     return z
@@ -15,9 +14,8 @@ def only_evens(x: list[int]) -> list[int]:
 
 def concat(x: list[int], y: list[int]) -> list[int]:
     """Defined a function that combines the elements of two lists into one longer list."""
-    i: int = 0
     z: list[int] = []
-    for x[i] in x:
+    for i in x:
         z.append(x[i])
     for y[i] in y:
         z.append(y[i])
