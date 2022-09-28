@@ -31,10 +31,10 @@ def sub(a_list: list[int], y: int, z: int) -> list[int]:
         return q
     if y == len(a_list):
         return q
-    if y < 0:
-        y = 0
     if z > len(a_list):
         z = len(a_list)
+    if y < 0:
+        y = 0
     else:
         while y < z:
             q.append(a_list[y])
