@@ -4,7 +4,7 @@ __author__: str = "730320104"
 
 from random import randint
 
-secret: int = 50
+secret: int = randint(1,100)
 
 x: int = 0
 
@@ -24,15 +24,16 @@ def greet() -> None:
     print(f"Ok {player}, let's begin the game! You have 3 options for your first 'shot': a) guess a random integer (+1 stroke), b) ask for a hint (+2 strokes), or c) give up (+1000 strokes). Please type your selection now: (a/b/c) ")
     y: str = input()
     if y == "a":
-        points = points + 1
         f = int(input("What is your integer guess? "))
         if f < secret:
             print("Not quite. Guess a higher number.")
+            points += 1
         if f > secret:
             print("Not quite. Guess a lower number.")
+            points += 1
         if f == secret:
-            print(f"Hole in one! Congratulations! Your total strokes was {points}.")
-            #quit()
+            print(f"Hole in one! Congratulations!")
+            points = 10
     if y == "b":
         points = points + 2
         if secret <= 50:
@@ -42,7 +43,7 @@ def greet() -> None:
     if y == "c":
         points = points + 1000
         print(f"Thank you for playing. Your total strokes was {points}.")
-        return points
+        points = 10
 
 
 def guess(z: int) -> int:
@@ -53,15 +54,14 @@ def guess(z: int) -> int:
     print(f"Now {player}, make your next integer guess (+1 stroke): ")
     z: int = int(input())
     if z < secret:
-        points = points + 1
+        points += 1
         print("Not quite. Guess a higher number.")
     if z > secret:
-        points = points + 1
+        points += 1
         print("Not quite. Guess a lower number.")
     if z == secret:
-        points = points + 1
-        #keep_playing += 1
         print(f"You got it! Congratulations! Your total strokes were {points}.")
+        points = 10
 
 
 def hint() -> None:
@@ -73,7 +73,7 @@ def hint() -> None:
     print(f"{player}, you have the option of taking another hint (+2 strokes). The hint will tell you if the secret number is even (green) or odd (yellow). If you would like to take the hint, input a 'y' now. ")
     answer: str = input()
     if answer == "y":
-        points = points + 2
+        points += 2
         if secret % 2 == 0:
             print(GREEN_BOX)
         else:
@@ -94,11 +94,10 @@ def main() -> None:
         while points < 10:
             guess(x)
         input(f"{player}, great job. Would you like to play again? Input the 'y' and 'ENTER' keys twice if yes and the 'n' and 'ENTER' keys twice if no: ")
+        points = 0
         if input() == "n":
-            keep_playing += 1
+            keep_playing = 1
 
 
 if __name__ == "__main__":
     main()
-
-    # struggling with player variable and game loop (quit)
