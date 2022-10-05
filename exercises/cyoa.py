@@ -4,7 +4,7 @@ __author__: str = "730320104"
 
 from random import randint
 
-secret: int = randint(1,100)
+secret: int = randint(1, 100)
 
 x: int = 0
 
@@ -32,7 +32,7 @@ def greet() -> None:
             print("Not quite. Guess a lower number.")
             points += 1
         if f == secret:
-            print(f"Hole in one! Congratulations!")
+            print("Hole in one! Congratulations!")
             points = 10
     if y == "b":
         points = points + 2
