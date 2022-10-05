@@ -46,13 +46,12 @@ def greet() -> None:
         points = 10
 
 
-def guess(z: int) -> int:
+def guess(z: int, points: int) -> int:
     """Defined the guess function for the game, which allows players to make multiple guesses for the secret number."""
-    global points
     global player
     global keep_playing
     print(f"Now {player}, make your next integer guess (+1 stroke): ")
-    z: int = int(input())
+    z = int(input())
     if z < secret:
         points += 1
         print("Not quite. Guess a higher number.")
@@ -62,6 +61,7 @@ def guess(z: int) -> int:
     if z == secret:
         print(f"You got it! Congratulations! Your total strokes were {points}.")
         points = 10
+    return points
 
 
 def hint() -> None:
@@ -92,10 +92,10 @@ def main() -> None:
         while points < 2:
             hint()
         while points < 10:
-            guess(x)
-        input(f"{player}, great job. Would you like to play again? Input the 'y' and 'ENTER' keys twice if yes and the 'n' and 'ENTER' keys twice if no: ")
+            points = guess(x, points)
+        yes: str = input(f"{player}, great job. Would you like to play again? You will start again with 0 points. Input the 'y' key if yes and the 'n' keys if no: ")
         points = 0
-        if input() == "n":
+        if yes == "n":
             keep_playing = 1
 
 
