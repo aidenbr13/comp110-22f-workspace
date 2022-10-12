@@ -22,9 +22,9 @@ def test_2_invert() -> None:
 
 def test_3_invert() -> None:
     """Created a use case unit test for the function we created that inverts a given dictionary."""
-    a: dict[str, str] = {'kris': 'jordan', 'michael': 'scott'}
-    assert invert(a) == {'jordan': 'kris', 'scott': 'michael'}
-
+    with pytest.raises(KeyError):
+        my_dictionary = {'kris': 'jordan', 'michael': 'jordan'}
+        invert(my_dictionary)
 
 def test_1_favorite_color() -> None:
     """Created a use case unit test for the function we created that returns the value (color) that appears most frequently."""
