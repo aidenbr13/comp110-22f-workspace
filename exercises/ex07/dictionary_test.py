@@ -26,6 +26,7 @@ def test_3_invert() -> None:
         my_dictionary = {'kris': 'jordan', 'michael': 'jordan'}
         invert(my_dictionary)
 
+
 def test_1_favorite_color() -> None:
     """Created a use case unit test for the function we created that returns the value (color) that appears most frequently."""
     a: dict[str, str] = {}
