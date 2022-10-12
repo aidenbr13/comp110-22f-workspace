@@ -2,6 +2,7 @@
 
 __author__: str = "730320104"
 
+import pytest
 from exercises.ex07.dictionary import invert
 from exercises.ex07.dictionary import favorite_color
 from exercises.ex07.dictionary import count
@@ -21,8 +22,8 @@ def test_2_invert() -> None:
 
 def test_3_invert() -> None:
     """Created a use case unit test for the function we created that inverts a given dictionary."""
-    a: dict[str, str] = {'kris': 'jordan', 'michael': 'jordan'}
-    assert invert(a) == KeyError
+    a: dict[str, str] = {'kris': 'jordan', 'michael': 'scott'}
+    assert invert(a) == {'jordan': 'kris', 'scott': 'michael'}
 
 
 def test_1_favorite_color() -> None:
