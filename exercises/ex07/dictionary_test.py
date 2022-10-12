@@ -15,7 +15,7 @@ def test_1_invert() -> None:
 
 def test_2_invert() -> None:
     """Created a use case unit test for the function we created that inverts a given dictionary."""
-    a: dict[str, str] = {'a': 'z', 'b' : 'y', 'c': 'x'}
+    a: dict[str, str] = {'a': 'z', 'b': 'y', 'c': 'x'}
     assert invert(a) == {'z': 'a', 'y': 'b', 'x': 'c'}
 
 
