@@ -18,13 +18,14 @@ def read_csv_rows(filename: str) -> list[dict[str, str]]:
     return result
 
 
-def column_values(table: list[dict[str,str]], column: str) -> list[str]:
+def column_values(table: list[dict[str, str]], column: str) -> list[str]:
     """Created a function that produces a list of all values in a single column."""
     result: list[str] = []
     for row in table:
         item: str = row[column]
         result.append(item)
     return result
+
 
 def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
     """Created a function that transforms a table represented as a list of rows into one represented as a dictionary of columns."""
@@ -74,6 +75,7 @@ def concat(dict_1: dict[str, list[str]], dict_2: dict[str, list[str]]) -> dict[s
 
 
 def count(x: list[str]) -> dict[str, int]:
+    """Created a function that counts the number of times a value appears in an input list."""
     result: dict[str, int] = {}
     for item in x:
         if item in result:
@@ -81,4 +83,3 @@ def count(x: list[str]) -> dict[str, int]:
         else:
             result[item] = 1
     return result
-
