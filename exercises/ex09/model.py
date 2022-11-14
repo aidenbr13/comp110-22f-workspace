@@ -147,15 +147,15 @@ class Model:
         if cell.location.x > constants.MAX_X:
             cell.location.x = constants.MAX_X
             cell.direction.x *= -1.0
-        if cell.location.x < constants.MIN_X:
-            cell.location.x = constants.MIN_X
-            cell.direction.x *= 1.0
-        if cell.location.y > constants.MAX_Y:
-            cell.location.y = constants.MAX_Y
+        if cell.location.y > constants.MIN_Y:
+            cell.location.y = constants.MIN_Y
+            cell.direction.y *= -1.0
+        if cell.location.x < constants.MAX_X:
+            cell.location.x = constants.MAX_X
             cell.direction.x *= -1.0
         if cell.location.y < constants.MIN_Y:
             cell.location.y = constants.MIN_Y
-            cell.direction.y *= 1.0
+            cell.direction.y *= -1.0
 
     def check_contacts(self) -> None:
         """Checking if cells have came into contact."""
