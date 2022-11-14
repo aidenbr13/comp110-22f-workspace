@@ -6,7 +6,7 @@ from exercises.ex09 import constants
 from math import sin, cos, pi, sqrt
 
 
-__author__ = "7303020104"
+__author__ = "730320104"
 
 
 class Point:
