@@ -171,7 +171,7 @@ class Model:
         for cell in self.population:
             if cell.is_infected():
                 infected_cells += 1
-            if infected_cells >= 1:
-                return False
-            else:
-                return True
+        if infected_cells >= 1:
+            return False
+        else:
+            return True
